@@ -59,6 +59,32 @@ In application controller:
   end```
 
 GEMS to include that Hunter mentioned:
-awesome_print
+awesome_print<br>
 better_errors
 binding_of_caller
+
+To include bootstrap: 
+- gem bootstrap-sass
+
+- between jQuery and jQuery_ujs
+
+- in main.scss
+@import "bootstrap sprockets"
+@import "bootstrap" 
+
+---
+**CUSTOM ROUTES**
+
+```
+Rails.application.routes.draw do 
+  #set the controller and action to go to upon to visiting "/"
+  #the format is controller#action
+  root 'cities#index'
+  
+  resources :cities, only: :index do 
+    resources :parks, except: :destroy do
+      resources :reviews
+      end
+    end 
+  end 
+```
