@@ -75,6 +75,8 @@ To include bootstrap:
 ---
 **CUSTOM ROUTES**
 
+`get '/cities/all', to: "cities#index"`
+
 ```
 Rails.application.routes.draw do 
   #set the controller and action to go to upon to visiting "/"
