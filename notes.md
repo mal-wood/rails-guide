@@ -121,7 +121,6 @@ In controller:
 ---
 **AJAX**
 
-
 <%= link_to 'Create a new review', new_city_park_review_path(@city, @park), remote: true %>
 *remote true tells Railes that upon clicking this link, you are making an xhr request, it will prevent the default behavior*
 
