@@ -54,8 +54,8 @@ $(document).on("turbolinks:load", function(){
 ^ make custom route 
 
 In application controller: 
-```def cookie<br>
-  render "hello, it worked!!"<br>
-end```
+```def cookie
+    render "hello, it worked!!"
+  end```
 
 
