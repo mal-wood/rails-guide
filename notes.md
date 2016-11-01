@@ -107,9 +107,11 @@ link to create a new park
 
 --- 
 In ERB: 
-```<%if @errors.each do |error|%>
+```
+<%if @errors.each do |error|%>
 <%= error %>
-<%end%>```
+<%end%>
+```
 
 In controller:
 `@errors = @variable.errors.full_messages`
