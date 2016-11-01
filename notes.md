@@ -58,4 +58,7 @@ In application controller:
     render "hello, it worked!!"
   end```
 
-
+GEMS to include that Hunter mentioned:
+awesome_print
+better_errors
+binding_of_caller
