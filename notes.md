@@ -117,3 +117,27 @@ In ERB:
 
 In controller:
 `@errors = @variable.errors.full_messages`
+
+---
+**AJAX**
+
+
+<%= link_to 'Create a new review', new_city_park_review_path(@city, @park), remote: true %>
+*remote true tells Railes that upon clicking this link, you are making an xhr request, it will prevent the default behavior*
+
+def new 
+  @review = Review.new
+  if request.xhr?
+    render partial: 'form', locals: {city: @city, park: @park, review: @review}
+  end
+end 
+
+Go to js file for your model...this is the way to do it if using remote: true...
+```
+$(document).ready(function(){
+  $('.new_review_link').on('ajax:success', function(event, response) {
+  console.log(event);
+  console.log(response);
+  })
+})
+```
