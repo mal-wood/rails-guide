@@ -81,10 +81,35 @@ Rails.application.routes.draw do
   #the format is controller#action
   root 'cities#index'
   
+  resources :parks, only: :show
+  
   resources :cities, only: :index do 
     resources :parks, except: :destroy do
-      resources :reviews
+      resources :reviews, except: [:index, :show]
       end
     end 
   end 
 ```
+
+** RAILS HELPERS ** 
+link_to DISPLAY TEXT, PATH, OPTIONAL ARGUMENTS
+* if you want to style a rails helper, you have to put the class or ID directly in the helper 
+
+link to create a new park 
+<%= link_to "Create a new park", new_city_park_path(@city) %>
+^^ good way to know if you need to pass anything to the path, is to check the path and see if it accepts any sort of ID 
+- for example, cities/:id/park << has one id that needs passed!
+
+<%= form_for [@city, @park] do |f| %>
+^^ if we are creating a park,  
+
+*form_for takes an ActiveRecord object, form_tag takes a path 
+
+--- 
+In ERB: 
+```<%if @errors.each do |error|%>
+<%= error %>
+<%end%>```
+
+In controller:
+`@errors = @variable.errors.full_messages`
