@@ -18,6 +18,12 @@
 
 10) check associations to make sure they work in the rails console 
 **CREATE ROUTES**<br>
+11) create actual controller files based on Models
+12) make sure controllers inherit from ApplicationController
+```
+class NameofModelController < ApplicationController  
+end
+```
 
 ---
 ---
