@@ -144,13 +144,14 @@ $(document).ready(function(){
 ```
 
 **Work w/ Christine on AJAX**
+```
 $(document).on("turbolinks:load", function(){
-
+  // rails way
   $('#new_stuff_path').on('ajax:success', function(event, response) {
     $('#new_stuff_path').toggle();
     $('#results-div').append(response);i
   })
-
+// old-school way 
   $('#results-div').on("submit", "form", function(event){
 
     $.ajax({
@@ -163,3 +164,4 @@ $(document).on("turbolinks:load", function(){
   })
 
 });
+```
