@@ -138,6 +138,7 @@ def new
 end 
 
 Go to js file for your model...this is the way to do it if using remote: true...
+
 ```
 $(document).ready(function(){
   $('.new_review_link').on('ajax:success', function(event, response) {
