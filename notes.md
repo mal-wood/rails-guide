@@ -7,13 +7,15 @@
 4) set remote by using<br><br>
   `git remote add origin https://github.com/somerepo`<br><br> 
 5) commit your current files and push your rails skeleton up to github<br><br>
-
----
-**CREATE MIGRATIONS AND MODELS**<br>
+**CREATE MIGRATIONS AND MODELS**
 6) `rails db:create` (so that your terminal does not YELL at you)<br>
+
 7) `rails g model model_name` (this will generate migration as well)...do this for all models<br>
+
 8) Go to migrations and models and fill them in (add columns to migrations and associations to models)<br>
+
 9) rails db:migrate<br>
+
 10) check associations to make sure they work in the rails console 
 
 ---
