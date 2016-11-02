@@ -17,6 +17,7 @@
 9) `rails db:migrate`<br>
 
 10) check associations to make sure they work in the rails console 
+**CREATE ROUTES**<br>
 
 ---
 ---
