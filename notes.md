@@ -14,7 +14,7 @@
 
 8) Go to migrations and models and fill them in (add columns to migrations and associations to models)<br>
 
-9) rails db:migrate<br>
+9) `rails db:migrate`<br>
 
 10) check associations to make sure they work in the rails console 
 
